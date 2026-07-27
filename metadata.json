@@ -1,0 +1,6 @@
+{
+  "name": "Affordable Moves",
+  "description": "UK-based professional removals and transport company website with moving cost estimator, service breakdowns, interactive quote tools, coverage map, and customer reviews.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
