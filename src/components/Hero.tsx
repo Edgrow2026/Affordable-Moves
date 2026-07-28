@@ -1,17 +1,34 @@
-import React, { useState } from 'react';
-import { motion } from 'motion/react';
-import { Phone, ShieldCheck, Star, Truck, Calendar, MapPin, ArrowRight, CheckCircle2 } from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "motion/react";
+import {
+  Phone,
+  ShieldCheck,
+  Star,
+  Truck,
+  Calendar,
+  MapPin,
+  ArrowRight,
+  CheckCircle2,
+} from "lucide-react";
 
 interface HeroProps {
-  onOpenQuoteModalWithData: (data: { pickupPostcode?: string; deliveryPostcode?: string; moveType?: string; moveDate?: string }) => void;
+  onOpenQuoteModalWithData: (data: {
+    pickupPostcode?: string;
+    deliveryPostcode?: string;
+    moveType?: string;
+    moveDate?: string;
+  }) => void;
   onOpenQuoteModal: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModalWithData, onOpenQuoteModal }) => {
-  const [pickupPostcode, setPickupPostcode] = useState('');
-  const [deliveryPostcode, setDeliveryPostcode] = useState('');
-  const [moveType, setMoveType] = useState('2-bed-house');
-  const [moveDate, setMoveDate] = useState('');
+export const Hero: React.FC<HeroProps> = ({
+  onOpenQuoteModalWithData,
+  onOpenQuoteModal,
+}) => {
+  const [pickupPostcode, setPickupPostcode] = useState("");
+  const [deliveryPostcode, setDeliveryPostcode] = useState("");
+  const [moveType, setMoveType] = useState("2-bed-house");
+  const [moveDate, setMoveDate] = useState("");
 
   const handleQuickQuoteSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,7 +41,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModalWithData, onOpenQuot
   };
 
   return (
-    <section id="hero" className="relative min-h-[90vh] flex flex-col justify-center overflow-hidden py-16 lg:py-24">
+    <section
+      id="hero"
+      className="relative min-h-[90vh] flex flex-col justify-center overflow-hidden py-16 lg:py-24"
+    >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -37,7 +57,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModalWithData, onOpenQuot
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(90deg, rgba(71, 88, 65, 0.95) 0%, rgba(71, 88, 65, 0.82) 45%, rgba(71, 88, 65, 0.45) 100%)',
+              "linear-gradient(90deg, rgba(71, 88, 65, 0.95) 0%, rgba(71, 88, 65, 0.82) 45%, rgba(71, 88, 65, 0.45) 100%)",
           }}
         />
       </div>
@@ -60,11 +80,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModalWithData, onOpenQuot
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold font-poppins leading-[1.15] text-white tracking-tight">
-              Stress-Free UK Removals at <span className="text-[#CDBA96]">Prices You Can Trust</span>
+              Stress-Free UK Removals at{" "}
+              <span className="text-[#CDBA96]">Prices You Can Trust</span>
             </h1>
 
             <p className="text-base sm:text-lg text-[#E6DAC4] max-w-2xl font-normal leading-relaxed">
-              Fully insured house and office removals across England, Scotland, Wales, and Northern Ireland. Professional 2-4 man crews, tail-lift lutons, and free furniture protection blankets included.
+              Fully insured house and office removals across England, Scotland,
+              Wales, and Northern Ireland. Professional 2-4 man crews, tail-lift
+              lutons, and free furniture protection blankets included.
             </p>
 
             {/* CTAs */}
@@ -82,7 +105,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModalWithData, onOpenQuot
                 className="border-2 border-[#E6DAC4] hover:bg-white hover:text-[#475841] text-white font-semibold font-poppins px-6 py-3.5 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 text-center"
               >
                 <Phone className="w-4 h-4" />
-                <span className="whitespace-nowrap">Call Now: 0800 123 4567</span>
+                <span className="whitespace-nowrap">
+                  Call Now: 0800 123 4567
+                </span>
               </a>
             </div>
 
@@ -108,16 +133,20 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModalWithData, onOpenQuot
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="lg:col-span-5 bg-white/95 backdrop-blur-md rounded-2xl p-6 sm:p-8 shadow-2xl border border-[#E6DAC4]"
+            className="lg:col-span-5 bg-white/45 backdrop-blur-xl rounded-2xl p-6 sm:p-8 shadow-2xl border border-white/30"
           >
-            <div className="flex items-center justify-between pb-4 border-b border-[#E6DAC4]">
+            <div className="flex items-center justify-between pb-4 border-b border-[#E6DAC4]/60">
+              {" "}
               <div>
-                <span className="text-[11px] font-bold text-[#B29A70] uppercase tracking-wider block">
+                <span className="text-[11px] font-bold text-[#a57f3e] uppercase tracking-wider block">
                   Instant Calculator
                 </span>
-                <h3 className="text-xl font-bold font-poppins text-[#475841]">Quick Quote Estimator</h3>
+                <h3 className="text-xl font-bold font-poppins text-[#475841]">
+                  Quick Quote Estimator
+                </h3>
               </div>
-              <div className="w-10 h-10 rounded-xl bg-[#FAF8F4] border border-[#E6DAC4] flex items-center justify-center text-[#5F7355]">
+              <div className="w-10 h-10 rounded-xl bg-white/30 backdrop-blur-md border border-white/40 flex items-center justify-center text-[#5F7355]">
+                {" "}
                 <Truck className="w-5 h-5" />
               </div>
             </div>
@@ -135,9 +164,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModalWithData, onOpenQuot
                   <option value="1-bed-flat">1 Bedroom Flat / Studio</option>
                   <option value="2-bed-house">2 Bedroom House / Flat</option>
                   <option value="3-bed-house">3 Bedroom House</option>
-                  <option value="4-plus-house">4+ Bedroom Detached House</option>
+                  <option value="4-plus-house">
+                    4+ Bedroom Detached House
+                  </option>
                   <option value="office">Office / Commercial Space</option>
-                  <option value="single-item">Single Furniture Item / Man & Van</option>
+                  <option value="single-item">
+                    Single Furniture Item / Man & Van
+                  </option>
                 </select>
               </div>
 
@@ -153,7 +186,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModalWithData, onOpenQuot
                       required
                       placeholder="e.g. SW1A 1AA"
                       value={pickupPostcode}
-                      onChange={(e) => setPickupPostcode(e.target.value.toUpperCase())}
+                      onChange={(e) =>
+                        setPickupPostcode(e.target.value.toUpperCase())
+                      }
                       className="w-full pl-9 pr-3 py-2.5 bg-[#FAF8F4] rounded-xl border border-[#E6DAC4] text-[#2F2F2F] text-sm uppercase focus:outline-none focus:ring-2 focus:ring-[#8C9B80]"
                     />
                   </div>
@@ -170,7 +205,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModalWithData, onOpenQuot
                       required
                       placeholder="e.g. M1 1AE"
                       value={deliveryPostcode}
-                      onChange={(e) => setDeliveryPostcode(e.target.value.toUpperCase())}
+                      onChange={(e) =>
+                        setDeliveryPostcode(e.target.value.toUpperCase())
+                      }
                       className="w-full pl-9 pr-3 py-2.5 bg-[#FAF8F4] rounded-xl border border-[#E6DAC4] text-[#2F2F2F] text-sm uppercase focus:outline-none focus:ring-2 focus:ring-[#8C9B80]"
                     />
                   </div>
@@ -214,32 +251,48 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModalWithData, onOpenQuot
             <span className="text-2xl sm:text-3xl font-extrabold font-poppins text-[#CDBA96] block">
               15,000+
             </span>
-            <span className="text-xs sm:text-sm font-medium text-white block">Moves Completed</span>
-            <span className="text-[11px] text-[#E6DAC4] block">Across England & UK</span>
+            <span className="text-xs sm:text-sm font-medium text-white block">
+              Moves Completed
+            </span>
+            <span className="text-[11px] text-[#E6DAC4] block">
+              Across England & UK
+            </span>
           </div>
 
           <div className="space-y-1">
             <span className="text-2xl sm:text-3xl font-extrabold font-poppins text-[#CDBA96] block">
               4.9 / 5.0
             </span>
-            <span className="text-xs sm:text-sm font-medium text-white block">Trustpilot Score</span>
-            <span className="text-[11px] text-[#E6DAC4] block">1,200+ Verified Reviews</span>
+            <span className="text-xs sm:text-sm font-medium text-white block">
+              Trustpilot Score
+            </span>
+            <span className="text-[11px] text-[#E6DAC4] block">
+              1,200+ Verified Reviews
+            </span>
           </div>
 
           <div className="space-y-1">
             <span className="text-2xl sm:text-3xl font-extrabold font-poppins text-[#CDBA96] block">
               £50,000
             </span>
-            <span className="text-xs sm:text-sm font-medium text-white block">Goods in Transit</span>
-            <span className="text-[11px] text-[#E6DAC4] block">Standard Protection Included</span>
+            <span className="text-xs sm:text-sm font-medium text-white block">
+              Goods in Transit
+            </span>
+            <span className="text-[11px] text-[#E6DAC4] block">
+              Standard Protection Included
+            </span>
           </div>
 
           <div className="space-y-1">
             <span className="text-2xl sm:text-3xl font-extrabold font-poppins text-[#CDBA96] block">
               12+ Years
             </span>
-            <span className="text-xs sm:text-sm font-medium text-white block">Removals Excellence</span>
-            <span className="text-[11px] text-[#E6DAC4] block">BAR Standard Trained Crews</span>
+            <span className="text-xs sm:text-sm font-medium text-white block">
+              Removals Excellence
+            </span>
+            <span className="text-[11px] text-[#E6DAC4] block">
+              BAR Standard Trained Crews
+            </span>
           </div>
         </div>
       </div>
