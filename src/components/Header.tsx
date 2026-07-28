@@ -1,5 +1,4 @@
 import { useEffect, useState, type FC, type MouseEvent } from "react";
-
 import { AnimatePresence, motion } from "framer-motion";
 import {
   Clock,
@@ -25,10 +24,7 @@ const navLinks: NavLink[] = [
   { name: "Home", href: "#hero" },
   { name: "About", href: "#about" },
   { name: "Estimator", href: "#estimator" },
-  { name: "Why Us", href: "#why-us" },
   { name: "Services", href: "#services" },
-  { name: "Coverage", href: "#coverage" },
-  { name: "Process", href: "#process" },
   { name: "Gallery", href: "#gallery" },
   { name: "Reviews", href: "#reviews" },
   { name: "FAQ", href: "#faq" },
@@ -143,7 +139,9 @@ export const Header: FC<HeaderProps> = ({
           {/* Logo */}
           <a
             href="#hero"
-            onClick={(event: MouseEvent<HTMLAnchorElement>) => handleNavClick(event, "#hero")}
+            onClick={(event: MouseEvent<HTMLAnchorElement>) =>
+              handleNavClick(event, "#hero")
+            }
             className="group flex items-center space-x-2 rounded-lg p-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#CDBA96] focus-visible:ring-offset-2"
             aria-label="Affordable Moves home"
           >
@@ -176,7 +174,9 @@ export const Header: FC<HeaderProps> = ({
                 <a
                   key={link.name}
                   href={link.href}
-                  onClick={(event: MouseEvent<HTMLAnchorElement>) => handleNavClick(event, link.href)}
+                  onClick={(event: MouseEvent<HTMLAnchorElement>) =>
+                    handleNavClick(event, link.href)
+                  }
                   className={`relative px-1 py-1.5 text-sm font-medium transition-colors ${
                     isActive
                       ? "font-semibold text-[#5F7355]"
@@ -204,14 +204,14 @@ export const Header: FC<HeaderProps> = ({
 
           {/* Desktop actions */}
           <div className="hidden items-center space-x-4 sm:flex">
-            <a
+            {/* <a
               href="tel:08001234567"
               className="flex items-center space-x-2 rounded-lg px-3 py-2 text-sm font-semibold text-[#475841] transition-colors hover:bg-[#E6DAC4]/40 hover:text-[#5F7355]"
               aria-label="Call 0800 123 4567"
             >
               <Phone className="h-4 w-4 text-[#5F7355]" aria-hidden="true" />
               <span className="whitespace-nowrap">0800 123 4567</span>
-            </a>
+            </a> */}
 
             <button
               type="button"
@@ -310,7 +310,9 @@ export const Header: FC<HeaderProps> = ({
                       <a
                         key={link.name}
                         href={link.href}
-                        onClick={(event: MouseEvent<HTMLAnchorElement>) => handleNavClick(event, link.href)}
+                        onClick={(event: MouseEvent<HTMLAnchorElement>) =>
+                          handleNavClick(event, link.href)
+                        }
                         className={`flex items-center rounded-xl px-4 py-3 text-sm font-medium transition-colors ${
                           isActive
                             ? "bg-[#E6DAC4] font-semibold text-[#475841]"
@@ -326,7 +328,7 @@ export const Header: FC<HeaderProps> = ({
               </div>
 
               <div className="space-y-3 border-t border-[#E6DAC4] pt-6">
-                <a
+                {/* <a
                   href="tel:08001234567"
                   className="flex w-full items-center justify-center space-x-2 rounded-xl bg-[#E6DAC4]/60 py-3 text-sm font-semibold text-[#475841]"
                 >
@@ -335,7 +337,7 @@ export const Header: FC<HeaderProps> = ({
                     aria-hidden="true"
                   />
                   <span>Call 0800 123 4567</span>
-                </a>
+                </a> */}
 
                 <button
                   type="button"
