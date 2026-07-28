@@ -1,5 +1,16 @@
-import React from 'react';
-import { Truck, Phone, Mail, MapPin, ShieldCheck, Heart, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import React from "react";
+import {
+  Truck,
+  Phone,
+  Mail,
+  MapPin,
+  ShieldCheck,
+  Heart,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+} from "lucide-react";
 
 interface FooterProps {
   onOpenQuoteModal: () => void;
@@ -17,21 +28,24 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal }) => {
                 <Truck className="w-6 h-6" />
               </div>
               <span className="text-2xl font-bold font-poppins text-white tracking-tight">
-                Affordable<span className="text-[#CDBA96] font-normal ml-1">Moves</span>
+                Affordable
+                <span className="text-[#CDBA96] font-normal ml-1">Moves</span>
               </span>
             </a>
 
             <p className="text-xs text-[#E6DAC4] leading-relaxed max-w-sm">
-              The UK’s trusted choice for stress-free house removals, man and van transport, office relocations, and secure climate-controlled storage. Operating to British Association of Removers standards.
+              The UK’s trusted choice for stress-free house removals, man and
+              van transport, office relocations, and secure climate-controlled
+              storage. Operating to British Association of Removers standards.
             </p>
 
             {/* Social Links */}
             <div className="flex items-center space-x-3 pt-2">
               {[
-                { icon: Facebook, label: 'Facebook', href: '#' },
-                { icon: Twitter, label: 'Twitter', href: '#' },
-                { icon: Instagram, label: 'Instagram', href: '#' },
-                { icon: Linkedin, label: 'LinkedIn', href: '#' },
+                { icon: Facebook, label: "Facebook", href: "#" },
+                { icon: Twitter, label: "Twitter", href: "#" },
+                { icon: Instagram, label: "Instagram", href: "#" },
+                { icon: Linkedin, label: "LinkedIn", href: "#" },
               ].map((soc, i) => {
                 const IconComp = soc.icon;
                 return (
@@ -50,38 +64,82 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal }) => {
 
           {/* Quick Links */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-sm font-bold font-poppins text-white uppercase tracking-wider">Quick Links</h4>
+            <h4 className="text-sm font-bold font-poppins text-white uppercase tracking-wider">
+              Quick Links
+            </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <a href="#about" className="hover:text-[#CDBA96] transition-colors">About Us</a>
+                <a
+                  href="#about"
+                  className="hover:text-[#CDBA96] transition-colors"
+                >
+                  About Us
+                </a>
               </li>
               <li>
-                <a href="#estimator" className="hover:text-[#CDBA96] transition-colors">Cost Estimator</a>
+                <a
+                  href="#estimator"
+                  className="hover:text-[#CDBA96] transition-colors"
+                >
+                  Cost Estimator
+                </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#CDBA96] transition-colors">Services</a>
+                <a
+                  href="#services"
+                  className="hover:text-[#CDBA96] transition-colors"
+                >
+                  Services
+                </a>
               </li>
               <li>
-                <a href="#coverage" className="hover:text-[#CDBA96] transition-colors">Coverage Areas</a>
+                <a
+                  href="#coverage"
+                  className="hover:text-[#CDBA96] transition-colors"
+                >
+                  Coverage Areas
+                </a>
               </li>
               <li>
-                <a href="#process" className="hover:text-[#CDBA96] transition-colors">How It Works</a>
+                <a
+                  href="#process"
+                  className="hover:text-[#CDBA96] transition-colors"
+                >
+                  How It Works
+                </a>
               </li>
               <li>
-                <a href="#gallery" className="hover:text-[#CDBA96] transition-colors">Fleet Gallery</a>
+                <a
+                  href="#gallery"
+                  className="hover:text-[#CDBA96] transition-colors"
+                >
+                  Fleet Gallery
+                </a>
               </li>
               <li>
-                <a href="#reviews" className="hover:text-[#CDBA96] transition-colors">Reviews</a>
+                <a
+                  href="#reviews"
+                  className="hover:text-[#CDBA96] transition-colors"
+                >
+                  Reviews
+                </a>
               </li>
               <li>
-                <a href="#faq" className="hover:text-[#CDBA96] transition-colors">FAQ</a>
+                <a
+                  href="#faq"
+                  className="hover:text-[#CDBA96] transition-colors"
+                >
+                  FAQ
+                </a>
               </li>
             </ul>
           </div>
 
           {/* Removals Services */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-sm font-bold font-poppins text-white uppercase tracking-wider">Services</h4>
+            <h4 className="text-sm font-bold font-poppins text-white uppercase tracking-wider">
+              Services
+            </h4>
             <ul className="space-y-2 text-xs">
               <li>Full House & Flat Removals</li>
               <li>Man & Van Hourly Service</li>
@@ -95,11 +153,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal }) => {
 
           {/* Contact Details & CTA */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-sm font-bold font-poppins text-white uppercase tracking-wider">Dispatch Helpline</h4>
+            <h4 className="text-sm font-bold font-poppins text-white uppercase tracking-wider">
+              Dispatch Helpline
+            </h4>
             <div className="space-y-2 text-xs">
               <p className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-[#CDBA96]" />
-                <span className="font-semibold text-white">Freephone: 0800 123 4567</span>
+                <span className="font-semibold text-white">
+                  Freephone: 0800 123 4567
+                </span>
               </p>
               <p className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-[#CDBA96]" />
@@ -124,13 +186,24 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal }) => {
 
         {/* Lower Bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#E6DAC4]">
-          <p>© {new Date().getFullYear()} Affordable Moves Ltd. Registered in England & Wales. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} Affordable Moves Ltd. Registered in
+            England & Wales. All rights reserved.
+          </p>
 
           <div className="flex items-center space-x-6 text-[11px]">
-            <a href="#" className="hover:text-[#CDBA96] transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-[#CDBA96] transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-[#CDBA96] transition-colors">Insurance Cover Details</a>
-            <a href="#" className="hover:text-[#CDBA96] transition-colors">Cookie Preferences</a>
+            <a href="#" className="hover:text-[#CDBA96] transition-colors">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:text-[#CDBA96] transition-colors">
+              Terms of Service
+            </a>
+            <a href="#" className="hover:text-[#CDBA96] transition-colors">
+              Insurance Cover Details
+            </a>
+            <a href="#" className="hover:text-[#CDBA96] transition-colors">
+              Cookie Preferences
+            </a>
           </div>
         </div>
       </div>
@@ -139,7 +212,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal }) => {
       <div className="bg-[#3C4B37] py-3 text-center text-[11px] text-[#E6DAC4]/80 border-t border-[#5F7355]/40">
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-center space-x-2">
           <ShieldCheck className="w-3.5 h-3.5 text-[#CDBA96]" />
-          <span>BAR Compliant • £50,000 Goods in Transit Protection Included Standard</span>
+          <span>
+            BAR Compliant • £50,000 Goods in Transit Protection Included
+            Standard
+          </span>
         </div>
       </div>
     </footer>
