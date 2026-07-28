@@ -8,6 +8,8 @@ import {
 } from "../types";
 
 import manVan from "../assets/images/man-van.jpg";
+import ecoFriendly from "../assets/images/eco-friendly.webp";
+import Budget from "../assets/images/Budget.jpg";
 export const SERVICES_DATA: ServiceItem[] = [
   {
     id: "house-removals",
@@ -264,8 +266,7 @@ export const GALLERY_DATA: GalleryItem[] = [
     id: "g6",
     title: "Eco-Friendly Box Supplies",
     category: "packing",
-    imageUrl:
-      "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&q=80&w=800",
+    imageUrl: ecoFriendly,
     caption:
       "100% recyclable double-walled cardboard boxes and biodegradable packing tape.",
   },
@@ -315,8 +316,7 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
     date: "June 10, 2026",
     summary:
       "Learn smart strategies to reduce your overall moving costs without sacrificing quality or peace of mind.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1580674285054-91550f4a2422?auto=format&fit=crop&q=80&w=800",
+    imageUrl: Budget,
     author: "David Hughes, Relocation Advisor",
     content: [
       "Timing matters: Mid-week moves (Tuesday-Thursday) often cost up to 20% less than peak Friday or weekend slots.",
