@@ -10,6 +10,12 @@ import {
 import manVan from "../assets/images/man-van.jpg";
 import ecoFriendly from "../assets/images/eco-friendly.webp";
 import Budget from "../assets/images/Budget.jpg";
+import apartmentMoving from "../assets/images/apartmentMoving.webp";
+import furnitureAssembly from "../assets/images/furnitureAssembly.jpg";
+import internationalMoving from "../assets/images/internationalMoving.jpg";
+import studentMoves from "../assets/images/studentMoves.jpg";
+import houseClearance from "../assets/images/houseClearance.jpg";
+
 export const SERVICES_DATA: ServiceItem[] = [
   {
     id: "house-removals",
@@ -121,6 +127,95 @@ export const SERVICES_DATA: ServiceItem[] = [
     imageUrl:
       "https://images.unsplash.com/photo-1506015391300-4802dc74de2e?auto=format&fit=crop&q=80&w=800",
     startingPrice: "From £380",
+  },
+  {
+    id: "apartment-moving",
+    title: "Apartment Moving",
+    shortDesc: "Stress-free apartment and flat relocation services.",
+    fullDesc:
+      "Whether you're moving into a studio apartment or a multi-bedroom flat, our experienced movers ensure a smooth, efficient, and damage-free relocation.",
+    iconName: "Building2",
+    imageUrl: apartmentMoving,
+    features: [
+      "Apartment and flat relocations",
+      "Careful handling of furniture and valuables",
+      "Stair and lift access specialists",
+      "Packing and unpacking assistance",
+      "Flexible weekday and weekend bookings",
+    ],
+    startingPrice: "From £150",
+  },
+
+  {
+    id: "furniture-assembly",
+    title: "Furniture Assembly",
+    shortDesc: "Professional assembly for all furniture brands.",
+    fullDesc:
+      "Save time and avoid frustration with our expert furniture assembly service for homes and offices, including IKEA, Argos, and more.",
+    iconName: "Wrench",
+    imageUrl: furnitureAssembly,
+    features: [
+      "IKEA, Argos & Wayfair assembly",
+      "Wardrobes, beds and desks",
+      "Office furniture installation",
+      "Disassembly and reassembly",
+      "Fast and reliable service",
+    ],
+    startingPrice: "From £60",
+  },
+
+  {
+    id: "international-moving",
+    title: "International Moving",
+    shortDesc: "Reliable overseas relocation solutions.",
+    fullDesc:
+      "Moving abroad? We provide secure international removals with professional packing, customs guidance, and worldwide shipping support.",
+    iconName: "Globe",
+    imageUrl: internationalMoving,
+    features: [
+      "Worldwide relocation services",
+      "Export-quality packing materials",
+      "Customs documentation assistance",
+      "Sea and air freight options",
+      "Door-to-door delivery",
+    ],
+    startingPrice: "From £950",
+  },
+
+  {
+    id: "student-moves",
+    title: "Student Moves",
+    shortDesc: "Affordable moving solutions for students.",
+    fullDesc:
+      "Perfect for university students moving between accommodation, halls, or shared houses with flexible booking and budget-friendly pricing.",
+    iconName: "GraduationCap",
+    imageUrl: studentMoves,
+    features: [
+      "Low-cost student packages",
+      "Same-day and weekend availability",
+      "Single room and shared house moves",
+      "Small van options available",
+      "Friendly professional movers",
+    ],
+    startingPrice: "From £40",
+  },
+
+  {
+    id: "house-clearance",
+    title: "House Clearance",
+    shortDesc: "Complete property clearance services.",
+    fullDesc:
+      "We provide full and partial house clearances for homes, flats, garages, lofts, and offices with responsible disposal and recycling.",
+    iconName: "Trash2",
+    imageUrl: houseClearance,
+    features: [
+      "Full and partial property clearances",
+      "Garage, loft and office clearance",
+      "Eco-friendly waste disposal",
+      "Furniture removal included",
+      "Same-day service available",
+    ],
+    startingPrice: "From £180",
   },
 ];
 
