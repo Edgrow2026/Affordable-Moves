@@ -1,6 +1,16 @@
-import React, { useState } from 'react';
-import { motion } from 'motion/react';
-import { FileText, Box, Truck, CheckCircle2, ArrowRight } from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "motion/react";
+import {
+  FileText,
+  Box,
+  Truck,
+  CheckCircle2,
+  ArrowRight,
+  Package,
+  ClipboardCheck,
+  CalendarCheck,
+  MapPin,
+} from "lucide-react";
 
 interface TimelineProps {
   onOpenQuoteModal: () => void;
@@ -11,29 +21,47 @@ export const Timeline: React.FC<TimelineProps> = ({ onOpenQuoteModal }) => {
 
   const steps = [
     {
-      number: '01',
+      number: "01",
       icon: FileText,
-      title: 'Free Quote & Virtual Survey',
-      desc: 'Submit your move details online or schedule a quick 5-minute video call to receive an instant, binding price quote with zero obligation.'
+      title: "Request Quote",
+      desc: "Submit your moving requirements online or contact our team for a free, no-obligation quotation.",
     },
     {
-      number: '02',
-      icon: Box,
-      title: 'Custom Plan & Box Delivery',
-      desc: 'Confirm your moving date and receive your double-walled box bundle delivered to your doorstep. Optional full packing service scheduled for the day prior.'
+      number: "02",
+      icon: ClipboardCheck,
+      title: "Free Survey",
+      desc: "We assess your moving requirements through a virtual or on-site survey to provide an accurate plan.",
     },
     {
-      number: '03',
+      number: "03",
+      icon: CalendarCheck,
+      title: "Planning",
+      desc: "We schedule your moving date, assign the right team, and create a customized moving plan.",
+    },
+    {
+      number: "04",
+      icon: Package,
+      title: "Packing",
+      desc: "Our professional movers carefully pack your belongings using high-quality packing materials for maximum protection.",
+    },
+    {
+      number: "05",
       icon: Truck,
-      title: 'Moving Day Execution',
-      desc: 'Our uniformed crew arrives punctually, lays down protective floor runners, wraps furniture, and safely loads everything onto our tail-lift vehicle.'
+      title: "Moving",
+      desc: "Your belongings are transported safely by our experienced team using fully equipped removal vehicles.",
     },
     {
-      number: '04',
+      number: "06",
+      icon: MapPin,
+      title: "Delivery",
+      desc: "We deliver your items safely and place them in the correct rooms at your new property.",
+    },
+    {
+      number: "07",
       icon: CheckCircle2,
-      title: 'Safe Delivery & Unpacking',
-      desc: 'We transport your goods under live GPS tracking, position furniture into your designated rooms, reassemble beds/wardrobes, and collect empty packing boxes.'
-    }
+      title: "Unpacking",
+      desc: "We help unpack your belongings, reassemble furniture if required, and ensure everything is in place before we leave.",
+    },
   ];
 
   return (
@@ -47,7 +75,8 @@ export const Timeline: React.FC<TimelineProps> = ({ onOpenQuoteModal }) => {
             How Our Removals Process Works
           </h2>
           <p className="text-[#666666] text-sm mt-3">
-            We handle every detail from initial planning to final room layout, ensuring a seamless, stress-free move.
+            We handle every detail from initial planning to final room layout,
+            ensuring a seamless, stress-free move.
           </p>
         </div>
 
@@ -57,7 +86,7 @@ export const Timeline: React.FC<TimelineProps> = ({ onOpenQuoteModal }) => {
           <div className="hidden lg:block absolute top-12 left-[10%] right-[10%] h-1 bg-[#E6DAC4] -z-0">
             <motion.div
               className="h-full bg-[#5F7355]"
-              initial={{ width: '0%' }}
+              initial={{ width: "0%" }}
               animate={{ width: `${(activeStep / (steps.length - 1)) * 100}%` }}
               transition={{ duration: 0.5 }}
             />
@@ -78,14 +107,16 @@ export const Timeline: React.FC<TimelineProps> = ({ onOpenQuoteModal }) => {
                   onClick={() => setActiveStep(idx)}
                   className={`cursor-pointer bg-white rounded-2xl p-6 border transition-all duration-300 text-center flex flex-col items-center ${
                     isActive
-                      ? 'border-[#5F7355] shadow-xl ring-2 ring-[#8C9B80]/40 -translate-y-2'
-                      : 'border-[#E6DAC4] shadow-xs hover:border-[#8C9B80]'
+                      ? "border-[#5F7355] shadow-xl ring-2 ring-[#8C9B80]/40 -translate-y-2"
+                      : "border-[#E6DAC4] shadow-xs hover:border-[#8C9B80]"
                   }`}
                 >
                   {/* Number Circle */}
                   <div
                     className={`w-14 h-14 rounded-full flex items-center justify-center font-bold text-lg font-poppins mb-4 transition-colors shadow-md ${
-                      isActive ? 'bg-[#5F7355] text-white' : 'bg-[#E6DAC4] text-[#5F7355]'
+                      isActive
+                        ? "bg-[#5F7355] text-white"
+                        : "bg-[#E6DAC4] text-[#5F7355]"
                     }`}
                   >
                     <span>{step.number}</span>
@@ -95,8 +126,12 @@ export const Timeline: React.FC<TimelineProps> = ({ onOpenQuoteModal }) => {
                     <IconComp className="w-5 h-5" />
                   </div>
 
-                  <h3 className="text-base font-bold font-poppins text-[#475841] mb-2">{step.title}</h3>
-                  <p className="text-xs text-[#666666] leading-relaxed">{step.desc}</p>
+                  <h3 className="text-base font-bold font-poppins text-[#475841] mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-xs text-[#666666] leading-relaxed">
+                    {step.desc}
+                  </p>
                 </motion.div>
               );
             })}
